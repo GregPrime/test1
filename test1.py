@@ -11,9 +11,9 @@ counts = Counter(text_data)
 # If user execute test1.py with arg 'sort'
 if sys.argv[1] = 'sort':
 	text_data = sorted(text_data)
-	maxlength = max(len(s) for s in text_data
+	maxlength = max(len(s) for s in text_data)
 	for names in text_data:
-		text_data[names] = f'{names: <{maxlength}}'
+		text_data[names] = '{:<{maxlength}}'.format(names)
 
 #Print results
 
