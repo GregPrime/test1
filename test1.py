@@ -8,6 +8,7 @@ for line in f.readlines():
 f.close()
 # counts of duplicate names
 counts = Counter(text_data)
+text_data = list(set(text_data))
 # If user execute test1.py with arg 'sort'
 if len(sys.argv) == 2:
 	if sys.argv[1] == 'sort':
