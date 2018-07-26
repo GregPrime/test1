@@ -11,7 +11,7 @@ counts = Counter(text_data)
 # If user execute test1.py with arg 'sort'
 if len(sys.argv) == 2:
 	if sys.argv[1] == 'sort':
-		text_data = sorted(text_data)
+		counts = sorted(counts)
 		for (names, count) in counts.items():
 			print('{:20}{:3}'.format(names, count))
 else:
