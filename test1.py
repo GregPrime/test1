@@ -1,6 +1,10 @@
-from collections import Counter
 text_data = []
+namescount = {}
 f = open('input.txt', 'r')
-for line in f.readlines():
-	text_data = text_data + line.split()
-counts = Counter(text_data)
+for names in f.read().split():
+	if names not in namescount:
+		namescount[names] = 1
+	else:
+		namescount[names] + = 1 
+for k,v in namescount.items():
+	print k, v
