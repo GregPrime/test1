@@ -8,12 +8,13 @@ for line in f.readlines():
 f.close()
 # counts of duplicate names
 counts = Counter(text_data)
+counts_list = counts.keys()
 # If user execute test1.py with arg 'sort'
 if len(sys.argv) == 2:
 	if sys.argv[1] == 'sort':
-		counts = sorted(counts)
-		for (names, count) in counts.items():
-			print('{:20}{:3}'.format(names, count))
+		counts_list = sorted(counts_list)
+		for names in counts_list:
+			print('{:20}{:3}'.format(names,counts[names])) 
 else:
 	for names in text_data:
 		print names, counts[names]
