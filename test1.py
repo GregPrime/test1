@@ -14,10 +14,8 @@ if len(sys.argv) == 2:
 		text_data = sorted(text_data)
 		maxlength = max(len(s) for s in text_data)
 		for names in text_data:
-			text_data[names] = '{:<{maxlength}}'.format(names, maxlength=maxlength)
-
-#Print results
-
-for names in text_data:
-	print names, counts[names]
+			print names, counts[names]
+else:
+	for names in text_data:
+		print names, counts[names]
 
